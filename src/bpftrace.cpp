@@ -337,7 +337,7 @@ std::set<std::string> BPFtrace::find_wildcard_matches(
     case ProbeType::kretprobe:
     {
       symbol_stream = get_symbols_from_file(
-          "/sys/kernel/debug/tracing/available_filter_functions");
+          "/sys/kernel/tracing/available_filter_functions");
       prefix = "";
       func = attach_point.func;
       ignore_trailing_module = true;
@@ -355,7 +355,7 @@ std::set<std::string> BPFtrace::find_wildcard_matches(
     case ProbeType::tracepoint:
     {
       symbol_stream = get_symbols_from_file(
-          "/sys/kernel/debug/tracing/available_events");
+          "/sys/kernel/tracing/available_events");
       prefix = attach_point.target;
       func = attach_point.func;
       break;

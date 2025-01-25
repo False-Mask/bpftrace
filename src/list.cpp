@@ -16,8 +16,8 @@
 
 namespace bpftrace {
 
-const std::string kprobe_path = "/sys/kernel/debug/tracing/available_filter_functions";
-const std::string tp_path = "/sys/kernel/debug/tracing/events";
+const std::string kprobe_path = "/sys/kernel/tracing/available_filter_functions";
+const std::string tp_path = "/sys/kernel/tracing/events";
 
 inline bool search_probe(const std::string &probe, const std::regex& re)
 {
