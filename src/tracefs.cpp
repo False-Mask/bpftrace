@@ -3,7 +3,7 @@
 
 namespace bpftrace::tracefs {
 
-#define DEBUGFS_TRACEFS "/sys/kernel/debug/tracing"
+#define DEBUGFS_TRACEFS "/sys/kernel/tracing"
 #define TRACEFS "/sys/kernel/tracing"
 
 std::string path()
